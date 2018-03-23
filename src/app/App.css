@@ -1,0 +1,40 @@
+
+body {
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#root {
+  margin-bottom: 10%;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.page-footer .footer-copyright {
+  justify-content: center;
+}
+
+.card.horizontal {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.card .card-content {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+h3 {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
