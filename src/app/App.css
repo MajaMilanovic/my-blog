@@ -4,10 +4,48 @@ body {
   position: relative;
   min-height: 100vh;
   flex-direction: column;
+  font-family: 'Cairo', sans-serif;
+  color: #333;
+}
+
+nav {
+  background-color: #449DD1;
 }
 
 #root {
   margin-bottom: 10%;
+}
+
+.card {
+  background-color: #78C0E0;
+}
+
+.new-post {
+  background-color: #78C0E0;
+  margin-top:20px;
+}
+
+.homepage-card {
+  text-align: center;
+  padding: 10px 6%;
+}
+
+.collection {
+  border: 0;
+}
+
+.collection a.collection-item {
+  color: #78C0E0;
+  padding: 20px 0;
+}
+
+.card .card-content .card-title,
+.card .card-content p {
+  color: #fff;
+}
+
+.card .card-content .card-title {
+  margin-bottom: 20px;
 }
 
 footer{
@@ -16,8 +54,38 @@ footer{
   width: 100%;
 }
 
+.page-footer {
+  background-color: #449DD1;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #449DD1;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.waves-effect.waves-teal.btn-flat {
+  background-color: #449DD1;
+  margin-top: 20px;
+  color: #fff;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #449DD1;
+}
+
 .page-footer .footer-copyright {
   justify-content: center;
+}
+
+.about-article {
+  text-align: justify;
+}
+
+.article-title {
+  text-align: center;
 }
 
 .card.horizontal {
@@ -37,4 +105,5 @@ h3 {
   margin: 0 0 10px 0;
   font-size: 1rem;
   font-weight: bold;
+  color: #fff;
 }
