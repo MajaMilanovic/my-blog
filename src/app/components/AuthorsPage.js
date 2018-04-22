@@ -1,24 +1,33 @@
-import React from "react";
-import { serviceAuthors } from "../../services/ServiceAuthors";
-import { AuthorCard } from "./AuthorCard";
+import React, { Component } from "react";
+import { Link } from "react-router-dom"
+import { serviceAuthor } from "../../services/ServiceAuthors"
 
-class AuthorsPage extends React.Component {
+class AuthorsPage extends Component {
     constructor(props) {
-        super(props);
-        this.state = { authors: [] }
+        super(props)
+        this.state = {
+            authorsList: []
+        }
     }
 
     componentDidMount() {
-        serviceAuthors.fetchAuthors()
-            .then(authors => this.setState({ authors }))
+        serviceAuthor.fetchAuthors()
+            .then((authorsList) => {
+                this.setState({ authorsList: authorsList });
+            })
     }
+
 
     render() {
         return (
             <div className="collection">
-                {this.state.authors.map((author, index) => <AuthorCard key={index} author={author} />)}
+                <h1>AUTHORS</h1>
+                {this.state.authorsList.map((author, index) => {
+                    return <Link to={`/authors/${author.id}`} className="collection-item" key={index}>{author.name}</Link >
+                })}
             </div>
         )
     }
 }
+
 export { AuthorsPage }

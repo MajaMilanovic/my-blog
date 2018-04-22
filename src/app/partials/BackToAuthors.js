@@ -3,7 +3,10 @@ import { Link } from "react-router-dom"
 
 const BackToAuthors = () => {
     return (
-        <Link to="/authors" className="waves-effect waves-teal btn-flat">Back</Link>
+        <Link to="/authors" className="waves-effect waves-teal btn-flat">
+            Back
+        </Link>
+
     )
 }
 

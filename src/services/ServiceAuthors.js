@@ -1,27 +1,19 @@
-import { Author } from "../entities/Author";
-import { url } from '../shared/constants';
-import { Post } from '../entities/Post';
-class ServiceAuthors {
-    fetchAuthors = () => {
-        
+import { Author } from "../entities/Author"
+import { url } from "../shared/constants"
+import { getNumberOfItemsFromArray } from "../shared/utils"
+
+class ServiceAuthor {
+    fetchAuthors(){
         return fetch(url.authorsURL)
-            .then(response => response.json())
-            .then(authors => {
-                return authors.map(author => new Author(author));
-            });
-    }
-    fetchAuthor = (id) => {
-        return fetch(`${url.authorsURL}${id}`)
-            .then(response => response.json())
-            .then(author => new Author(author));
-    }
-    fetchAuthorPosts = (id) => {
-        return fetch(`${url.authorPostURL}${id}`)
-            .then(response => response.json())
-            .then(posts => {
-                return posts.map(post => new Post(post));
-            });
+        .then((response)=> response.json())
+        .then((responseAuthors)=>{
+           const myAuthors=  getNumberOfItemsFromArray(responseAuthors,8);
+           return myAuthors.map((author)=>{
+               return new Author (author)
+           })
+        })
+        .catch((error)=>{throw(error)})
     }
 }
 
-export const serviceAuthors = new ServiceAuthors()
+export const serviceAuthor = new ServiceAuthor()

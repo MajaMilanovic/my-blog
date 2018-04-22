@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Post } from "../../entities/Post"
-import { servicePost } from "../../services/ServicePost";
 
 
-const NewPost = (props) => {
+const NewPostPage = (props) => {
     const { createNewPost } = props
 
     const saveNewPost = (e) => {
@@ -12,16 +11,19 @@ const NewPost = (props) => {
         const postData = {
             title: document.querySelector("#input-title").value,
             body: document.querySelector("#textarea-content").value,
-            userId: "",
-            id: ""
+            userId:"",
+            id:""
         }
+
         //2. make new post object
-        const post = new Post(postData);
-        localStorage.setItem("newPost", JSON.stringify(post))
-        servicePost.setNewPost(post);
+        const post = new Post (postData);
+
+        //3. pass post object to Main
+        createNewPost(post)
+
         //4. reset form
-        postData.title = ""
-        postData.body = ""
+        postData.title=""
+        postData.body=""
 
     }
 
@@ -29,7 +31,7 @@ const NewPost = (props) => {
         <div className="container">
             <form>
                 <div>
-                    <h1>CREATE NEW POST</h1>
+                    <h1>NEW POST</h1>
                     <div className="input-field">
                         <h2>Title</h2>
                         <input id="input-title" type="text" />
@@ -42,8 +44,8 @@ const NewPost = (props) => {
                     </div>
                 </div>
                 <div id="button-links">
-                    <Link to="/" className="btn new-post">Cancel</Link>
-                    <Link to="/" className="btn  new-post right" id="button-save" onClick={saveNewPost}>Save</Link>
+                    <Link to="/" className="btn #3949ab indigo lighten-1">Cancel</Link>
+                    <Link to="/" className="btn #3949ab indigo lighten-1" id="button-save" onClick={saveNewPost}>Save</Link>
                 </div>
             </form>
         </div>
@@ -51,4 +53,4 @@ const NewPost = (props) => {
 }
 
 
-export { NewPost }
+export { NewPostPage }

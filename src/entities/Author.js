@@ -3,16 +3,20 @@ class Author {
         this.id = user.id;
         this.name = user.name;
         this.username = user.username;
-        this.email = user.email;
-        this.streetAddress = user.address.street;
-        this.cityAddress = user.address.city;
-        this.zipcodeAddress = user.address.zipcode;
-        this.addressGeoLat = user.address.geo.lat;
-        this.addressGeoLng = user.address.geo.lng;
         this.phone = user.phone;
-        this.companyName = user.company.name;
-        this.companySlogan = user.company.catchPhrase;
+        this.email = user.email;
+        this.address = {
+            street: user.address.street,
+            city: user.address.city,
+            zipcode: user.address.zipcode
+        };
+        this.company = {
+            name: user.company.name,
+            slogan: user.company.catchPhrase
+        };
     }
 }
 
-export { Author };
+export {
+    Author
+};

@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
-import { Article } from "./Article";
+import { Header } from "../partials/Header";
+import { Footer } from "../partials/Footer";
+import { Article } from "./Article"
 
 const AboutPage = () => {
     return (
