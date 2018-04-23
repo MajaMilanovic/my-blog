@@ -5,7 +5,7 @@ import { getCurrentYear } from "../../shared/utils";
 const Footer = () => {
     return (
         <footer>
-            <span className="footer-sign-name"> Maya Milanovic {getCurrentYear()}</span>
+            <span className="footer-sign-name"> Maja Milanovic {getCurrentYear()}</span>
         </footer>
     )
 }
