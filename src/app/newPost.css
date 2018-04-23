@@ -1,0 +1,35 @@
+.input-new-post-title {
+    margin-top: 3%;
+}
+
+.new-post-title {
+    text-align: center;
+    margin-top: 5%;
+}
+
+#button-new-post-send {
+    margin-top: 5%;
+}
+
+#button-new-post-cancel {
+    margin-top: 5%;
+    float: right;
+}
+.holder{
+    width: 70%;
+    margin: 0 auto;
+}
+.input-user-ID{
+    margin-top: 3%;
+}
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    outline: 0;
+    border-color: #e6cee7;
+    box-shadow: none;
+}
+.input-group-text{
+    background-color: #bcb4bc;
+    color: #fff;
+}

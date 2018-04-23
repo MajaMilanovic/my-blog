@@ -1,58 +1,79 @@
+#image-page-not-found {
+    display: block;
+    margin: 50px auto 0 auto;
+}
 
-body {
-  display: flex;
-  position: relative;
-  min-height: 100vh;
-  flex-direction: column;
+#jumboImg,
+#feed-jumboImg {
+    background-image: url(https://i.ytimg.com/vi/R0sDkek6JEU/maxresdefault.jpg);
+    background-size: cover;
+}
+
+.post-title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.post-body {
+    text-align: center;
+    padding: 1%;
+    margin-top: 5%;
+}
+
+.post-list-title {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2%;
+}
+
+.list-group-item {
+    font-size: 0.9rem;
+}
+
+.comment-title {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.comment-email {
+    text-decoration: underline;
+    margin-bottom: 0.3rem;
+}
+
+.about-header {
+    padding: 5%;
+}
+
+article {
+    padding: 10%;
+    padding-top: 0;
 }
 
 #root {
-  margin-bottom: 10%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    position: relative;
+    font-family: 'Meera Inimai', sans-serif;
 }
 
-footer{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+.main-container {
+    padding-bottom: 20px;
+    margin-bottom: 6%;
+    margin-top: 0.4%;
 }
 
-.page-footer .footer-copyright {
-  justify-content: center;
+.span-remove-post i {
+    display: inline-block;
+    float: right;
+    color: #cb00ff;
+    margin-bottom: 1%;
+    cursor: pointer;
 }
 
-.card.horizontal {
-  display: flex;
-  align-items: center;
-  padding: 0 10px;
+.input-comment {
+    padding: 1%;
 }
-
-.card .card-content {
-  padding: 20px 10px;
-  display: flex;
-  flex-direction: column;
- 
-}
-
-h3 {
-  margin: 0 0 10px 0;
-  font-size: 1rem;
-  font-weight: bold;
-}
-.card .card-title{
-  font-size: 2rem;
-  text-align: center;
-}
-
-h1{
-  font-size: 2.5rem;
-  text-align: center;
-}
-h2{
-  font-size: 2rem;
-}
-#button-links{
-  float: right;
-}
-#button-save{
-  margin-left: 20px;
+.button-holder{
+    margin: 0 auto;
 }

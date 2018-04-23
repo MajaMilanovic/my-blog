@@ -1,13 +1,13 @@
-import React from "react"
+import React from "react";
+import "./partials.css";
+import { getCurrentYear } from "../../shared/utils";
 
 const Footer = () => {
     return (
-        <footer className="page-footer #3949ab indigo darken-1">
-            <div className="footer-copyright">
-                © 2018 Copyright Text
-             </div>
+        <footer>
+            <span className="footer-sign-name"> Maya Milanovic {getCurrentYear()}</span>
         </footer>
     )
 }
 
-export { Footer }
+export { Footer };
